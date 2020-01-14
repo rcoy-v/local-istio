@@ -11,9 +11,9 @@ The following tools are used locally:
 - [Kind](https://kind.sigs.k8s.io/), *required*
 - Make, *optional*.
 If unavailable, commands can be taken from the [makefile](./makefile) and run directly.
-- [Istioctl](), *optional*.
+- [Istioctl](https://istio.io/docs/setup/install/istioctl/), *optional*.
 A local Docker image is used for running the necessary commands to install Istio.
-- [Kubectl](), *optional*.
+- [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), *optional*.
 Not directly needed for creating the resources of this project,
 but will likely be wanted for interacting with the K8s cluster after creation.
 
