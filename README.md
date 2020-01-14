@@ -16,6 +16,9 @@ A local Docker image is used for running the necessary commands to install Istio
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), *optional*.
 Not directly needed for creating the resources of this project,
 but will likely be wanted for interacting with the K8s cluster after creation.
+- [Tanka](https://tanka.dev/), *optional*.
+Used to generate and apply additional K8s manifests.
+A local Docker image is used for running the necessary commands.
 
 ## Running Locally
 
@@ -23,3 +26,14 @@ but will likely be wanted for interacting with the K8s cluster after creation.
 - `make clean`: Deletes K8s cluster.
 - `make reset`: Shorthand for `make clean; make`.
 Useful for quickly starting over.
+
+After standing everything up with `make`, it may take a few minutes for all Istio components to become ready.
+You can watch the pods become ready with `watch kubectl -n istio-system get pods`.
+
+Once all pods are ready, the Istio gateway can be reached at `http://localhost:8080`.
+
+### Services Exposed
+
+Some of the demo profile services that are deployed are exposed through the gateway as well.
+
+- [Kiali](http://localhost:8080/kiali)
