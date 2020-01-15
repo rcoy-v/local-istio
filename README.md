@@ -28,12 +28,13 @@ A local Docker image is used for running the necessary commands.
 Useful for quickly starting over.
 
 After standing everything up with `make`, it may take a few minutes for all Istio components to become ready.
-You can watch the pods become ready with `watch kubectl -n istio-system get pods`.
+The `make` script will wait until all pods are ready.
 
-Once all pods are ready, the Istio gateway can be reached at `http://localhost:8080`.
+Once `make` is finished, the Istio ingress-gateway can be reached at `http://localhost:8080`.
 
 ### Services Exposed
 
 Some of the demo profile services that are deployed are exposed through the gateway as well.
 
 - [Kiali](http://localhost:8080/kiali)
+    - Login credentials are `admin:admin`.
