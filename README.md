@@ -38,3 +38,10 @@ Some of the demo profile services that are deployed are exposed through the gate
 
 - [Kiali](http://localhost:8080/kiali)
     - Login credentials are `admin:admin`.
+
+### Troubleshooting
+
+#### Istio won't fully deploy/start
+
+Make sure your Docker configuration is allocated enough resources.
+You may need to increase cpu/memory, as detailed [here](https://istio.io/docs/setup/platform-setup/docker/).
