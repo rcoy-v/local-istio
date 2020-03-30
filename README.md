@@ -16,7 +16,7 @@ A local Docker image is used for running the necessary commands to install Istio
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), *optional*.
 Not directly needed for creating the resources of this project,
 but will likely be wanted for interacting with the K8s cluster after creation.
-- [Tanka](https://tanka.dev/), *optional*.
+- [Kustomize](https://kustomize.io/), *optional*.
 Used to generate and apply additional K8s manifests.
 A local Docker image is used for running the necessary commands.
 

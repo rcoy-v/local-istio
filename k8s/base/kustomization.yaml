@@ -1,0 +1,2 @@
+resources:
+  - kiali-virtualservice.yaml

@@ -12,7 +12,4 @@ for deploy in $istioDeployments; do
     kubectl -n istio-system rollout status -w deploy $deploy
 done
 
-cp -R k8s /tmp/k8s
-cd /tmp/k8s
-tk env set --server "$(kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}')" environments/default
-tk apply --dangerous-auto-approve environments/default
+kubectl apply -k k8s/base
