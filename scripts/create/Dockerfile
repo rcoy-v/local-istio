@@ -1,6 +1,6 @@
 FROM alpine:3.11
 ARG KUBECTL_VERSION=1.16.4
-ARG ISTIO_VERSION=1.4.7
+ARG ISTIO_VERSION=1.5.1
 ENV PATH=/opt/istio-$ISTIO_VERSION/bin:$PATH
 RUN apk add --no-cache --no-progress bash jq
 RUN wget -qO /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl &&\
